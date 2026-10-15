@@ -1,0 +1,40 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <meta charset="UTF-8">
+  <title>Question Paper Security – ExamGuard AI</title>
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <link rel="stylesheet" href="examguard.css">
+</head>
+<body>
+
+  <header>
+    <a href="index.html" class="logo">🛡️ ExamGuard <span>AI</span></a>
+
+    <nav>
+      <a href="index.html">Dashboard</a>
+      <a href="ExamCentre.html">Exam Centres</a>
+      <a href="QuestionPapers.html" class="active">Question Papers</a>
+      <a href="Ai-threats.html">AI Threats</a>
+      <a href="Results.html">Results</a>
+      <a href="Admin.html">Admin Security</a>
+    </nav>
+  </header>
+
+  <main>
+    <div class="page-top">
+      <h1>Question Paper Security</h1>
+      <button onclick="showPapers()">🔄 Refresh</button>
+    </div>
+
+    <p class="note">Click a question paper to see its security report.</p>
+
+    <div class="centres" id="papers"></div>
+
+    <div id="report"></div>
+  </main>
+
+  <script src="QuestionPapers.js"></script>
+
+</body>
+</html>

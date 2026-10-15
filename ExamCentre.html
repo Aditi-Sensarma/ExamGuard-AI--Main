@@ -1,0 +1,40 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <meta charset="UTF-8">
+  <title>Examination Centre Monitor – ExamGuard AI</title>
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <link rel="stylesheet" href="examguard.css">
+</head>
+<body>
+
+  <header>
+    <a href="index.html" class="logo">🛡️ ExamGuard <span>AI</span></a>
+
+    <nav>
+      <a href="index.html">Dashboard</a>
+      <a href="ExamCentre.html" class="active">Exam Centres</a>
+      <a href="QuestionPapers.html">Question Papers</a>
+      <a href="Ai-threats.html">AI Threats</a>
+      <a href="Results.html">Results</a>
+      <a href="Admin.html">Admin Security</a>
+    </nav>
+  </header>
+
+  <main>
+    <div class="page-top">
+      <h1>Examination Centre Monitor</h1>
+      <button onclick="showCentres()">🔄 Refresh</button>
+    </div>
+
+    <p class="note">Click a centre to see its details.</p>
+
+    <div class="centres" id="centres"></div>
+
+    <div id="details"></div>
+  </main>
+
+  <script src="ExamCentre.js"></script>
+
+</body>
+</html>

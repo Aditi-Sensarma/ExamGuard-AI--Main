@@ -1,0 +1,39 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <title>AI Threat Detection – ExamGuard AI</title>
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <link rel="stylesheet" href="examguard.css">
+</head>
+<body>
+
+  <header>
+    <a href="index.html" class="logo">🛡️ ExamGuard <span>AI</span></a>
+
+    <nav>
+      <a href="index.html">Dashboard</a>
+      <a href="ExamCentre.html">Exam Centres</a>
+      <a href="QuestionPapers.html">Question Papers</a>
+      <a href="Ai-threats.html" class="active">AI Threats</a>
+      <a href="Results.html">Results</a>
+      <a href="Admin.html">Admin Security</a>
+    </nav>
+  </header>
+
+  <main>
+    <div class="page-top">
+      <h1>AI Threat Detection</h1>
+      <button onclick="scan()">RUN SECURITY SCAN</button>
+    </div>
+
+    <p class="note" id="status">Click Run Security Scan to check the examination systems.</p>
+
+
+   
+    <div id="threats"></div>
+  </main>
+
+  <script src="Ai-threats.js"></script>
+
+</body>
+</html>

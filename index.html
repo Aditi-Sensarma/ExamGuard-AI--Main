@@ -1,0 +1,73 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <title>Exam Security Dashboard – ExamGuard AI</title>
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+ <link rel="stylesheet" href="examguard.css">
+</head>
+<body>
+
+  <header>
+    <a href="index.html" class="logo">🛡️ ExamGuard <span>AI</span></a>
+
+    <nav>
+      <a href="index.html" class="active">Dashboard</a>
+      <a href="ExamCentre.html">Exam Centres</a>
+      <a href="QuestionPapers.html">Question Papers</a>
+      <a href="Ai-threats.html">AI Threats</a>
+      <a href="Results.html">Results</a>
+      <a href="Admin.html">Admin Security</a>
+    </nav>
+  </header>
+
+  <main>
+    <div class="page-top">
+      <h1>Exam Security Dashboard</h1>
+      <button onclick="refresh()">🔄 Refresh</button>
+    </div>
+
+
+    <div class="score-card">
+      <p>Overall Exam Security Score</p>
+      <h2><i id="score">91</i><span>/100</span></h2>
+      <div class="bar"><div class="fill" id="fill"></div></div>
+    </div>
+
+ 
+    <div class="stats">
+      <div class="card">
+        <p>Examination centres monitored</p>
+        <h3 id="centres">125</h3>
+      </div>
+      <div class="card">
+        <p>Active administrators</p>
+        <h3 id="admins">18</h3>
+      </div>
+      <div class="card">
+        <p>Secure systems</p>
+        <h3 id="secure">97%</h3>
+      </div>
+      <div class="card">
+        <p>Suspicious activities today</p>
+        <h3 class="orange" id="suspicious">3</h3>
+      </div>
+      <div class="card">
+        <p>Critical threats</p>
+        <h3 class="red" id="threats">1</h3>
+      </div>
+    </div>
+
+    <h2 class="section-title">Recent Alerts</h2>
+    <table>
+      <tr>
+        <th>Alert</th>
+        <th>Risk</th>
+      </tr>
+      <tbody id="alerts"></tbody>
+    </table>
+  </main>
+
+  <script src="1main.js"></script>
+
+</body>
+</html>

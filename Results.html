@@ -1,0 +1,89 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <meta charset="UTF-8">
+  <title>Result &amp; Marks Security – ExamGuard AI</title>
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <link rel="stylesheet" href="examguard.css">
+</head>
+<body>
+
+  <header>
+    <a href="index.html" class="logo">🛡️ ExamGuard <span>AI</span></a>
+
+    <nav>
+      <a href="index.html">Dashboard</a>
+      <a href="ExamCentre.html">Exam Centres</a>
+      <a href="QuestionPapers.html">Question Papers</a>
+      <a href="Ai-threats.html">AI Threats</a>
+      <a href="Results.html" class="active">Results</a>
+      <a href="Admin.html">Admin Security</a>
+    </nav>
+  </header>
+
+  <main>
+    <div class="page-top">
+      <h1>Result &amp; Marks Security</h1>
+      <div>
+        <button onclick="openForm()">✏️ Send a request for changing results</button>
+        <button onclick="showChanges()">🔄 Refresh</button>
+      </div>
+    </div>
+
+    <p class="note">The system monitors whether anyone is trying to modify examination results.</p>
+
+    <div class="card form-box" id="formBox" style="display: none;">
+      <h3>Mark change request</h3>
+      <p class="note">Every request is checked by the system before an examiner sees it.</p>
+
+      <div class="fields">
+        <div>
+          <label>Candidate number</label>
+          <input type="text" id="fCandidate" placeholder="CBSE26X417">
+        </div>
+        <div>
+          <label>Subject</label>
+          <input type="text" id="fSubject" placeholder="Mathematics">
+        </div>
+        <div>
+          <label>Examination centre</label>
+          <input type="text" id="fCentre" placeholder="Centre 004 – Thrissur">
+        </div>
+        <div>
+          <label>Requested by</label>
+          <input type="text" id="fUser" placeholder="admin01">
+        </div>
+        <div>
+          <label>Old mark</label>
+          <input type="number" id="fOld" min="0" max="100" placeholder="76">
+        </div>
+        <div>
+          <label>New mark</label>
+          <input type="number" id="fNew" min="0" max="100" placeholder="81">
+        </div>
+      </div>
+
+      <div class="actions">
+        <button onclick="sendRequest()">Send request</button>
+        <button onclick="closeForm()" class="grey">Cancel</button>
+      </div>
+
+      <p class="form-message" id="formMessage"></p>
+    </div>
+
+    <h2>Requests awaiting review</h2>
+    <div id="requests"><p class="note">Loading...</p></div>
+
+    
+    <h2>Suspicious modifications detected</h2>
+    <div id="changes"></div>
+  </main>
+
+  <script src="https://www.gstatic.com/firebasejs/10.12.0/firebase-app-compat.js"></script>
+  <script src="https://www.gstatic.com/firebasejs/10.12.0/firebase-firestore-compat.js"></script>
+  <script src="results-firebase.js"></script>
+
+  <script src="Results.js"></script>
+
+</body>
+</html>

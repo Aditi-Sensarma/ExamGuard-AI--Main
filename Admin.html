@@ -1,0 +1,48 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <meta charset="UTF-8">
+  <title>Administrator Login Monitor – ExamGuard AI</title>
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <link rel="stylesheet" href="examguard.css">
+</head>
+<body>
+
+  <header>
+    <a href="index.html" class="logo">🛡️ ExamGuard <span>AI</span></a>
+
+    <nav>
+      <a href="index.html">Dashboard</a>
+      <a href="ExamCentre.html">Exam Centres</a>
+      <a href="QuestionPapers.html">Question Papers</a>
+      <a href="Ai-threats.html">AI Threats</a>
+      <a href="Results.html">Results</a>
+      <a href="Admin.html" class="active">Admin Security</a>
+    </nav>
+  </header>
+
+  <main>
+    <div class="page-top">
+      <h1>Administrator Login Monitor</h1>
+      <button onclick="showUsers()">🔄 Refresh</button>
+    </div>
+
+    <p class="note">People who have access to sensitive examination systems. Click a user to see what the AI noticed.</p>
+
+    <table>
+      <tr>
+        <th>User</th>
+        <th>Role</th>
+        <th>Status</th>
+      </tr>
+      <tbody id="users"></tbody>
+    </table>
+
+
+    <div id="userDetails"></div>
+  </main>
+
+  <script src="Admin.js"></script>
+
+</body>
+</html>
